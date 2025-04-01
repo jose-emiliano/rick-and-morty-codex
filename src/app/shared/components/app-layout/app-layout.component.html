@@ -1,0 +1,34 @@
+<div class="app-layout" [class.hidden]="!opened">
+  <div class="header-menu">
+    <a routerLink="/home" (click)="toggleMenu()">
+      <img src="/assets/images/rick-and-morty.png" alt="Logo da Marvel">
+    </a>
+    <div class="menu-container" (click)="toggleMenu()">
+      <div class="menu-hamburguer"></div>
+    </div>
+  </div>
+  <ul>
+    <li><a (click)="toggleMenu()" routerLink="/home" routerLinkActive="link-active">Home</a></li>
+    <li><a (click)="toggleMenu()" routerLink="/characters" routerLinkActive="link-active">Characters</a></li>
+    <li><a (click)="toggleMenu()" routerLink="/episodes" routerLinkActive="link-active">Episodes</a></li>
+    <li><a (click)="toggleMenu()" routerLink="/locations" routerLinkActive="link-active">Locations</a></li>
+  </ul>
+</div>
+
+<div class="app-layout-toggle">
+  <div class="header-menu">
+    <a routerLink="/home">
+      <img src="/assets/images/rick-and-morty.png" alt="Logo da Marvel">
+    </a>
+    <div class="menu-container" (click)="toggleMenu()">
+      <div class="menu-hamburguer"></div>
+    </div>
+  </div>
+</div>
+
+<div class="content-container">
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <layout-footer></layout-footer>
+</div>

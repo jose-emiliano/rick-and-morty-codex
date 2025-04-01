@@ -1,0 +1,30 @@
+@import '../../../../assets/styles/variables';
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  font-size: 0.85rem;
+  background: map-get($colors, blue);
+  color: #aaa;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: .8rem;
+    color: darken($color: #aaa, $amount: 10%);
+    margin-bottom: 8px;
+  }
+
+  p a, a {
+    text-decoration: none;
+    color: map-get($colors, light-blue)
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 90px;
+  }
+}

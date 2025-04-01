@@ -1,9 +1,22 @@
+@import 'assets/styles/fonts';
+@import 'assets/styles/variables';
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
 body, h1, h2, h3, p, figure, blockquote, dl, dd {
   margin: 0;
+}
+
+html {
+  height: auto;
+  background: linear-gradient(
+    45deg,
+    map-get($colors, light-blue) 0%,
+    map-get($colors, light-blue) 50%,
+    map-get($colors, blue) 100%
+  );
 }
 
 ul[role='list'], ol[role='list'] {
