@@ -1,0 +1,28 @@
+<div class="header">
+  <h1>Rick and Morty Codex</h1>
+  
+  <h2>Descubra tudo sobre seus personagens favoritos da série, incluindo episódios, locais e muito mais!</h2>
+</div>
+
+<div class="container">
+  <div class="container-list">
+    <p>Personagens</p>
+    <div class="cards-container">
+      <character-card *ngFor="let character of characters$ | async" [character]="character"></character-card>
+    </div>
+  </div>
+
+  <div class="container-list">
+    <p>Episódios</p>
+    <div class="cards-container">
+      <episode-card *ngFor="let episode of episodes$ | async" [episode]="episode"></episode-card>
+    </div>
+  </div>
+
+  <div class="container-list">
+    <p>Locais</p>
+    <div class="cards-container">
+      <locality-card *ngFor="let locality of locations$ | async" [locality]="locality"></locality-card>
+    </div>
+  </div>
+</div>

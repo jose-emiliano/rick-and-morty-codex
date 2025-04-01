@@ -1,0 +1,63 @@
+@import '../../../assets/styles/variables';
+
+.header {
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 500px;
+  color: #f4f4f4;
+
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.container {
+  border: 1px solid rgba(#000, $alpha: 0.2);
+  background-color: #f4f4f4;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  
+  .container-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    
+    p {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 600;
+      font-size: 14pt;
+    }
+
+    .cards-container {
+      display: flex;
+      gap: 24px;
+      overflow: auto;
+      padding-bottom: 16px;
+    }
+  }
+}

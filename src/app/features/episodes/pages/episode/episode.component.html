@@ -1,0 +1,19 @@
+<div class="episode-container" *ngIf="episode$ | async as episode">
+  <div class="episode-info">
+    <p class="title">{{ episode.name }}</p>
+    <div class="episode-details">
+      <p>
+        <span class="subtitle">Gender</span>
+        <span>{{ episode.air_date }}</span>
+      </p>
+      <p>
+        <span class="subtitle">Specie</span>
+        <span>{{ episode.episode }}</span>
+      </p>
+      <p>
+        <span class="subtitle">Origin</span>
+        <span>{{ episode.name }}</span>
+      </p>
+    </div>
+  </div>
+</div>

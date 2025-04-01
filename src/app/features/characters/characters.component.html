@@ -1,0 +1,7 @@
+<search (search)="searcCharacters($event)"></search>
+<div class="container">
+  <div class="list">
+    <character-card *ngFor="let item of items$ | async" [character]="item"></character-card>
+  </div>
+  <paginator [totalPages]="totalPages" [currentPage]="currentPage" (pageChange)="pageChange($event)"></paginator>
+</div>

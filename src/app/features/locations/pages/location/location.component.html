@@ -1,0 +1,19 @@
+<div class="locality-container" *ngIf="locality$ | async as locality">
+  <div class="locality-info">
+    <p class="title">{{ locality.name }}</p>
+    <div class="locality-details">
+      <p>
+        <span class="subtitle">Gender</span>
+        <span>{{ locality.dimension }}</span>
+      </p>
+      <p>
+        <span class="subtitle">Specie</span>
+        <span>{{ locality.name }}</span>
+      </p>
+      <p>
+        <span class="subtitle">Origin</span>
+        <span>{{ locality.type }}</span>
+      </p>
+    </div>
+  </div>
+</div>

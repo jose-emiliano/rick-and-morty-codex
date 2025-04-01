@@ -1,0 +1,13 @@
+<a [routerLink]="'/location/' + locality.id" class="locality">
+  <div>
+    <p class="locality-title">{{ locality.name }}</p>
+    <p class="locality-subtitle">Dimension: {{ locality.dimension }}</p>
+  </div>
+
+  <div class="locality-details">
+    <div class="character-list">
+      <img *ngFor="let character of characters$ | async" [src]="character.image" [alt]="character.name">
+    </div>
+    <span>{{ locality.type }}</span>
+  </div>
+</a>

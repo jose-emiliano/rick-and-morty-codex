@@ -1,0 +1,7 @@
+<a [routerLink]="'/character/' + character.id" class="character">
+  <div>
+    <img [src]="character.image" alt="Imagem do personagem">
+    <span>{{ character.name }}</span>
+  </div>
+  <span class="species">{{ character.species }}</span>
+</a>

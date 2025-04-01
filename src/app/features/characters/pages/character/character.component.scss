@@ -1,0 +1,72 @@
+@import '../../../../../assets/styles/variables';
+
+.character-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+  border: 1px solid rgba(#000, $alpha: 0.2);
+  border-radius: 4px;
+  padding: 16px;
+  
+  .character-details {
+    display: flex;
+    width: 100%;
+    margin-bottom: 16px;
+
+    img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 3px solid map-get($colors, light-blue);
+    }
+  
+    .character-info {
+      padding: 0 32px;
+      width: 100%;
+    
+      .title {
+        font-size: 4rem;
+        font-family: 'Orbitron';
+        margin-bottom: 16px;
+      }
+    
+      .character-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+  
+        .subtitle {
+          color: rgba(#000, $alpha: 0.4);
+          font-size: .8rem
+        }
+        
+        p {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .container-list {
+      p {
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 600;
+        font-size: 14pt;
+        margin-bottom: 8px;
+      }
+      
+      .list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        justify-items: normal;
+        gap: 8px;
+      }
+    }
+  }
+}

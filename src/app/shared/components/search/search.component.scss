@@ -1,0 +1,57 @@
+.search-container {
+  display: flex;
+  margin-bottom: 8px;
+  justify-content: center;
+  padding: 8px;
+
+  .input-container {
+    display: flex;
+    padding: 4px;
+    background: #f4f4f4;
+    border-radius: 4px 0 0 4px;
+    border-top: 1px solid rgba(#000, $alpha: 0.4);
+    border-bottom: 1px solid rgba(#000, $alpha: 0.4);
+    border-left: 1px solid rgba(#000, $alpha: 0.4);
+
+    input {
+      background: #f4f4f4;
+      font-size: 1.5rem;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+  }
+
+  .close {
+    background: #f4f4f4;
+    border-top: 1px solid rgba(#000, $alpha: 0.4);
+    border-bottom: 1px solid rgba(#000, $alpha: 0.4);
+
+    &.hidden {
+      img {
+        display: none;
+      }
+    }
+  }
+
+  .search {
+    border-top: 1px solid rgba(#000, $alpha: 0.4);
+    border-bottom: 1px solid rgba(#000, $alpha: 0.4);
+    border-right: 1px solid rgba(#000, $alpha: 0.4);
+    border-radius: 0 4px 4px 0;
+    background-color: darken($color: #f4f4f4, $amount: 10%);
+  }
+
+  button, input {
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

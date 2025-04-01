@@ -1,0 +1,12 @@
+<a [routerLink]="'/episode/' + episode.id" class="episode">
+  <div>
+    <p class="episode-title">{{ episode.name }}</p>
+    <p class="episode-subtitle">{{ episode.air_date }}</p>
+  </div>
+  <div class="episode-details">
+    <div class="character-list">
+      <img *ngFor="let character of characters$ | async" [src]="character.image" [alt]="character.name">
+    </div>
+    <span>{{ episode.episode }}</span>
+  </div>
+</a>

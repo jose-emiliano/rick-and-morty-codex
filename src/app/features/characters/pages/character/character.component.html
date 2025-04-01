@@ -1,0 +1,48 @@
+<div class="character-container" *ngIf="character">
+  <div class="character-details">
+    <img [src]="character.image" [alt]="character.name">
+    <div class="character-info">
+      <p class="title">{{ character.name }}</p>
+      <div class="character-details">
+        <p *ngIf="character.gender">
+          <span class="subtitle">Gender</span>
+          <span>{{ character.gender }}</span>
+        </p>
+        <p *ngIf="character.species">
+          <span class="subtitle">Specie</span>
+          <span>{{ character.species }}</span>
+        </p>
+        <p *ngIf="character.origin.name">
+          <span class="subtitle">Origin</span>
+          <span>{{ character.origin.name }}</span>
+        </p>
+        <p *ngIf="character.location.name">
+          <span class="subtitle">Location</span>
+          <span>{{ character.location.name }}</span>
+        </p>
+        <p *ngIf="character.status">
+          <span class="subtitle">Status</span>
+          <span>{{ character.status }}</span>
+        </p>
+        <p *ngIf="character.type">
+          <span class="subtitle">Type</span>
+          <span>{{ character.type }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="cards-container">
+    <div class="container-list">
+      <p>Locations</p>
+      <div class="list">
+        <locality-card *ngFor="let locality of locations$ | async" [locality]="locality"></locality-card>
+      </div>
+    </div>
+    <div class="container-list">
+      <p>Episodes</p>
+      <div class="list">
+        <episode-card *ngFor="let episode of episodes$ | async" [episode]="episode"></episode-card>
+      </div>
+    </div>
+  </div>
+</div>

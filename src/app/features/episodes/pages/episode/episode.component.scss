@@ -1,0 +1,33 @@
+.episode-container {
+  background-color: #f4f4f4;
+  border: 1px solid rgba(#000, $alpha: 0.2);
+  border-radius: 4px;
+  padding: 16px;
+  display: flex;
+
+  .episode-info {
+    width: 100%;
+  
+    .title {
+      font-size: 4rem;
+      font-family: 'Orbitron';
+      margin-bottom: 16px;
+    }
+  
+    .episode-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+
+      .subtitle {
+        color: rgba(#000, $alpha: 0.4);
+        font-size: .8rem
+      }
+      
+      p {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
