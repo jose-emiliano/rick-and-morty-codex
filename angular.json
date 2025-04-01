@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "d96d68a8-ec57-4299-83d2-47c2053bf524"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -58,11 +61,17 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ],
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
+              "buildOptimizer": false,
+              "vendorChunk": true,
               "namedChunks": true
             }
           },
